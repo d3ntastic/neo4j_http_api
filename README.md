@@ -11,7 +11,7 @@ This project was created, because some programming languages doesn't have a neo4
 {
     "secret": "yourSecret",
     "statement": "MATCH (n:Product) WHERE n.title = $title RETURN n",
-    "parameters": {title: "Product 1"}
+    "parameter": {title: "Product 1"}
 }
 ```
 
