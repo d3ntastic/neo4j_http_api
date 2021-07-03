@@ -1,3 +1,20 @@
+This is a next.js project, that provides a HTTP API to neo4j (Aura). It takes a cypher statement and it's parameters and returns the response from the neo4j js driver.
+This project was created, because some programming languages doesn't have a neo4j driver and neo4j Aura doesn't has a HTTP API.
+
+## How to use
+
+- run this project or host it at Vercel (more infos below)
+- set all enviroment variables (DATABASE, USERNAME, PASSWORD, SECRET)
+- send POST requests to /api/neo4j with a body like this:
+
+```text
+{
+    "secret": "yourSecret",
+    "statement": "MATCH (n:Product) WHERE n.title = $title RETURN n",
+    "parameters": {title: "Product 1"}
+}
+```
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
